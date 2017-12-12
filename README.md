@@ -13,4 +13,5 @@ https://www.tindie.com/products/33366583/penlaser-bot-controller/
 
 The grbl firmware must be modified as shown here:
 http://www.buildlog.net/blog/2017/08/using-grbls-spindle-pwm-to-control-a-servo/
-in order to control the z axis servo using the PWM pin. 
+in order to control the z axis servo using the PWM pin. However, the code shown here proved to be incorrect.
+I have the fixed version in this repo. 
