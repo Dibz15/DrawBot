@@ -365,6 +365,14 @@ ISR(TIMER1_COMPA_vect)
         // Set real-time spindle output as segment is loaded, just prior to the first step.
         spindle_set_speed(st.exec_segment->spindle_pwm);
       #endif
+	  
+	  
+	  // pen up/down
+	  if (sys_position[Z_AXIS] > 0)
+		  pen_up();
+	  else if(sys_position[Z_AXIS] <= 0)
+		  pen_down();
+	  
 
     } else {
       // Segment buffer empty. Shutdown.
